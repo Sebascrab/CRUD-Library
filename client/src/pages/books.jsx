@@ -30,7 +30,7 @@ const Books = () => {
                     <div className='book' key={book.id}>
                         {book.cover && <img src={book.cover} alt="" />}
                         <h2>{book.title}</h2>
-                        <p>{book.desc}</p>
+                        <p>{book.description}</p>
                         <span>{book.price}</span>
                     </div>
                 ))}
