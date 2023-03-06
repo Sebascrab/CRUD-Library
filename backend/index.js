@@ -1,5 +1,6 @@
 const express = require('express');
 const mysql = require('mysql2');
+const cors = require('cors');
 
 const app = express();
 
@@ -14,7 +15,9 @@ const db = mysql.createConnection({
 // ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '3577';
 
 // allows us to send json data
-app.use(express.json())
+app.use(express.json());
+app.use(cors());
+
 
 
 app.get("/", (req, res) => {
